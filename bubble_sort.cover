@@ -1,0 +1,18 @@
+    1: def sortit(lst):
+    1:     length=len(lst)
+    1:     isSorted=True;
+       
+   11:     for i in range(length):
+   55:         for j in range(0,length-i-1): #cuz if it was (length-i) we get out of index erro ;and if it was (length-1) it will not be effecient cuz it will repeat it self in const times althoug i has been detected the pervoius number
+   45:             if(lst[j]>lst[j+1]):
+   35:                 temp=lst[j]
+   35:                 lst[j]=lst[j+1]
+   35:                 lst[j+1]=temp
+   35:                 isSorted=False
+   10:         if(isSorted==True):
+                   break
+    1:     print(lst)
+       
+    1: if __name__ == '__main__':
+    1:     lst=[5,9,4,8,3,7,2,6,1,0]
+    1:     sortit(lst)
